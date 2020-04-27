@@ -1,0 +1,40 @@
+//load fonts  is a hidden comment  
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Playfair+Display:ital,wght@0,400;1,400;1,500&family=Sonsie+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Sonsie One', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+*/
+$font-body: 'open sans','lato';
+$dark-blue: #1d1145;
+$white: #fff;
+$background-html: #dedede;
+$background-body: #f7f7f7;
+$text-color1: #fff;
+$text-color2: #1d1145;
+$text-color3: #f2a1a1; //rgba 231, 109, 137 used in gradient
+$navbar:            #00a0a0; //rgba 0, 160, 160
+$nav-link:          #fff;  // rgb 255, 255, 255
+$link:              #00a0a0;//rgb(0, 0, 255);
+$hover-link:        #dedede;
+$active-link:       #1d1145;
+$visited-link:      transparentize($active-link, .7);
+// @font-face{
+//     font-family: "Roboto";
+//     src: "../fonts/Roboto/Roboto-Regular.ttf";
+// }
+$jumbotron-headings: "Sonsie One" , "Playfair Display" ;
+$font-family: "Roboto";
+$primary-color: #4458dc; 
+$border-color:#dedede;
+$gradient-color:linear-gradient(90deg,#00a0a0 0%, #e76d89 100%);
+$gradient-color2:linear-gradient(90deg,#e76d89 0%, #00a0a0 100%);
+$gradient-navbar: $text-color2;
+$box-shadow: 0px 10px 30px rgba(57,56, 61,0.205);
+$color-even-cells:  transparentize($dark-blue, .7);
+

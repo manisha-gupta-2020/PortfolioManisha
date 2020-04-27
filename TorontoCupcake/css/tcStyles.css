@@ -1,0 +1,814 @@
+/************************************************************************************
+													TABLE OF CONTENTS
+*************************************************************************************
+1) Project details, color and typography details
+2) CSS Reset
+3) Global styles(tags, basic styling)
+4) Header and nav
+5) Main body content
+6) Generic selectors (shared page class styles)
+7) Media queries
+
+**************************************************************************************/
+
+/************************************************************************************
+	1. 		 PROJECT DETALS, COLOR AND TYPOGRAPHY
+
+	Author   :  Manisha Gupta
+  Project  :  FEWD-FINAL Toronto Cupcake, redesign
+	Ver 		 :0.1
+
+*********************      COLORS       *************************************
+	page background  -light yellow -  #FFFFF8 100%, rgb(255, 255, 248)  , hsv(60°, 3%, 100
+	title,  background -pink - #F2B1CB 100% , rgb(242, 177, 203), hsv(336°, 27%, 95%)
+	header backgound -yellow-  - #F8F3CB 100%, rgb(248, 243, 203), hsv(53.33333333333332°, 18%, 97%)
+	header copy - brown - #39100F 100%, rgb(57, 16, 15), hsv(1.4285714285714284°, 74%, 22%)
+
+********************    TYPOGRAPHY      ****************************************/
+/*google font   ----------      
+font-family: 'Roboto', sans-serif;*/
+
+
+/************************************************************************************
+	2. 		 CSS RESET
+*************************************************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* selector types used in CSS -  universal,id, class, descendant, type,pseudo-class, group,*/
+*{   /* use of universal selector */
+	margin: 0;
+	padding: 0;
+	border: none;
+  font-size: 10px;
+  line-height: 1;
+  font-family: roboto, sans-serif;
+  color: #39100F;
+  box-sizing: border-box;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+header, main, nav, article, section, aside, figure, figcaption, footer,video,audio{
+    display: block;
+}
+html{ background-color: #39100F;}
+body {
+	line-height: 1.4;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 .1em;
+  background-color: #FFFFF8;
+  border: solid 2px #39100F;
+  /* advanced checkbox hack rules */
+   -webkit-animation: bugfix 1s;
+  /*- end rules */
+}
+ol, ul, li {	list-style-type: none;}
+
+/************************************************************************************
+	3. 		 GLOBAL STYLES
+*************************************************************************************/
+
+p, pre{
+ font: 1.5em/1 Roboto,sans-serif;
+/* font: 2.0em/1.5 Roboto,sans-serif;*/
+ color: #39100F;
+ padding: 0 .2em;
+}
+header{  background-color: #F8F3CB; }
+
+footer{  background-color: #F8F3CB; }
+/* responsive image*/
+img{
+  max-width: 100%;
+  height: auto;
+ }
+/*responsive map*/
+.clMapWrapper{
+  position: relative;
+ padding-bottom:75%;/* h/w 450/600 .75*/
+ height: 0;
+ overflow: hidden;
+}
+.clMapWrapper iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+/*       width: 100%;*/
+  height: 100%;
+  border: 0;
+}
+ /**** setting button styles ****/
+.clBtn {
+  background-color: #F2B1CB;
+  color: #39100F;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.clBtn:hover {
+  color: #F2B1CB;
+  background-color: #39100F;
+}
+.clHeaderWrapper a:hover{cursor: pointer;}
+
+/************* icons and mission statement on home page*************/
+.clIcon{
+   width: 25px;
+   height: 25px;
+   margin: .5em 1em;
+ }
+.clMission{
+  font-size: 2em;
+/*  margin: .5em 0 2em 0;*/
+  padding: .5em .5em;
+  border: solid 1px #39100F;
+ background-color: #F2B1CB;
+ text-align: center;
+}
+
+/*
+ header, nav, article, footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*/
+/***************************************************************************
+	4. 		 HEADER AND NAVIGATION
+**************************************************************************/
+
+header h1 {
+ display: inline-block;
+  margin: 0px 0px;
+ padding: 1rem 1rem;
+}
+h2, h3, h4{
+  text-transform:capitalize;
+  padding: .6rem 0px;
+  margin: 0;
+}
+h1{
+ font: italic 2.5em 'lucida calligraphy',serif;
+ text-transform:capitalize;
+ margin: 0;
+}
+h2{
+ font: italic bold 2.2em 'lucida bright',serif;
+ text-align: center;
+}
+h3{
+ font: bolder 2em 'lucida bright',serif;
+ text-align: left;
+}
+h4{ font: 1.8em satisfy,serif;}
+/*for h2 headers with pink background and border*/
+.clH2color{
+  border: solid 1px #39100F;
+ background-color: #F2B1CB;
+}
+/* page headers for cupcake.htmlwith no background color and capiltalize text*/
+.clCupcakeH2{
+  background-color: #FFFFF8;
+  text-transform: uppercase;
+}
+/* page headers with no background color and capiltalize text*/
+.clH2{
+  background-color: #FFFFF8;
+  text-transform: capitalize;
+  border: none;
+}
+
+ /**** inline link styles ****/ 
+/*a{text-decoration: none; font-size:2em;}*/
+a:-webkit-any-link {
+  color: #2196F3; 
+  font-size:1.0em;
+  padding: .5em;
+  cursor: pointer;
+  text-decoration: none; 
+
+}
+a:link{
+  color: #2196F3; 
+  font-size:1.0em;
+  padding: .5em;
+  cursor: pointer;
+  text-decoration: none; 
+ 
+}
+a:visited{opacity: 50%}
+a:focus{cursor: pointer;}
+a:hover{cursor: pointer;}
+a:active{background-color: #39100F; }
+
+/********* code for header  and footer navigation ****/
+header nav a:link, footer nav a:link, .clNoLink, #idCupcakeSectionsContainer nav a:link{
+  text-transform: uppercase;
+  font: bold 1.5em/1.5 consolas sans-serif;
+  color: #39100F;     
+  padding: .5em;
+}
+header nav a:visited, footer nav a:visited, #idCupcakeSectionsContainer nav a:visited{ opacity: 50%;}
+header nav a:focus, footer nav a:focus{ cursor: pointer; }
+header nav a:hover, footer nav a:hover{ cursor: pointer; }
+header nav a:active, footer nav a:active,#idCupcakeSectionsContainer nav a:active{
+  background-color: #39100F;
+  color: #F8F3CB;
+  border: solid 1px #39100F;
+}
+footer nav ul li , #idCupcakeSectionsContainer nav ul li{  display: block;}
+footer nav ul , #idCupcakeSectionsContainer nav ul {
+/*  display: inline-block;*/
+  padding: 0 .1em;
+  margin: 0;
+}
+footer nav ul li a, #idCupcakeSectionsContainer nav ul li a{
+/*  display: inline-block;*/
+  padding: 0 .2em;
+  color: #39100F;
+  display: block;
+}
+  
+/**** end code for header  navigation ****/ 
+/*#idCupcakeSectionsContainer nav li a, .clFtNav li a*/
+/********* code for responsive toggle navigation ****/
+.clFtNav{
+   overflow: hidden;
+}
+.clHdrNav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0 .1em;
+}
+.clHdrNav li{
+  margin: 0;
+  border-bottom: solid 1px #39100F;
+}
+.clHdrNav li a{
+  color: #39100F;
+  display: block;
+}
+/*
+#idCupcakeSectionsContainer nav li a, .clFtNav li a{
+  color: #39100F;
+  display: block;
+} 
+*/
+.clHdrNav nav{
+  height: 0;
+  overflow: hidden;
+}
+@-webkit-keyframes bugfix{
+   from {padding: 0;}
+   to{padding: 0;}
+}
+.clHdrNav input[type=checkbox]{
+  position: absolute;
+  top: -999em;
+  left: -999em;
+}
+
+.clHdrNav label{
+  display: block;
+  height: 2.5em;
+  width: 2.5em;
+  background: url(../images/menuBar57X50.png)no-repeat left center ;
+  background-size: 25px 25px;
+  text-indent: -999em;
+  cursor: pointer;
+  -webkit-user-select: none; /* for chrome and safari */
+  -moz-user-select: none; /* for firefox */
+  -ms-user-select: none; /* IE 10+ */
+   position: relative;
+  right: -10px;
+}
+
+.clHdrNav input[type=checkbox]:checked ~ nav{
+  height: auto;
+  overflow: hidden;
+}
+
+/**** end code for top responsive toggle navigation ****/ 
+
+
+/********************************************************************
+	5. 		 MAIN BODY CONTENT
+********************************************************************/
+ /**********************body grid layout******************/
+   .clBodyWrapper{
+      height: 100%;
+       display: grid;
+       grid-gap: 2px;
+      grid-template-columns: repeat(auto-fit,minmax(95%,1fr));
+/*      grid-template-rows: repeat(auto-fit,minmax(15%, auto));*/
+    grid-template-rows: repeat(auto-fit,minmax(1.5%, auto));
+      grid-template-areas: 
+       "hdr hdr"
+       "cnt cnt"
+       "ftr ftr";
+      align-items: center;
+     }
+     .clHead{grid-area: hdr;}
+     .clMain{grid-area: cnt;}
+     .clFooter{grid-area: ftr;}
+/********************************************************/
+
+/**********************  header grid layout******************/
+.clHeaderWrapper{
+   display: grid;
+   grid-gap: .5em;
+   grid-template-columns: 10% auto 10% 12%;
+   grid-template-rows: 1fr auto;
+   grid-template-areas: 
+    "logo hdr usr crt"
+    "rnv rnv rnv rnv";
+   align-items: center;
+   align-self: center; 
+}     
+ .clLogo{grid-area: logo; 
+    height: 5em; 
+    width: 5em;
+    justify-self: center;
+}
+ .clHeaderWrapper h1{
+   grid-area: hdr;    
+   justify-self: center;
+}
+ .clUsr{
+   grid-area: usr;
+    justify-self: center;
+}
+ .clCart{
+   grid-area: crt;
+   justify-self: center;
+}
+ .clHdrNav{ grid-area: rnv; }
+/********************************************************/
+
+/****************** index page main content grid ****************/     
+.clMainWrapper{
+  display: grid;
+  grid-gap: .5em;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5% 2.5fr auto 1fr;
+  grid-template-areas: 
+  "hln "
+  "hero"
+  "msn"
+  "spr";
+  justify-items: center;        
+  align-items: center;
+  align-self: center;
+  padding-top: 1em;
+}     
+.clMainWrapper h2{grid-area: hln; padding-top: 2em; align-self: flex-end; justify-self:center;}
+.clMainWrapper img:nth-of-type(1){grid-area: hero; }
+.clMainWrapper p:only-of-type{margin-top: 2em;}     
+.clmsn{grid-area: msn;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center; 
+   justify-items: center;
+}
+
+.clSpr{grid-area: spr; padding-top: 2em;}      
+.clHeaderWrapper a:hover{cursor: pointer;}     
+/********************************************************/
+
+/**************** footer grid layout******************/
+     .clFooterWrapper{
+       display: grid;
+       grid-gap: .5em;
+       grid-template-columns: repeat(1,1fr);
+       grid-template-rows: auto 15% 15%;
+       grid-template-areas: 
+        "sm"
+        "pn"
+        "nv";
+      justify-items: center;        
+      align-items: center;
+      align-self: center;
+      padding-top: 1em;
+     }     
+     .clFtrIcons{grid-area: sm;}
+     .clFtP{grid-area: pn; }
+     .clFtNav{grid-area: nv; padding: 1em 0 2em;}
+
+/********************************************************/
+/**** setting flex direction to column for tcContact.html form. not changing to flex:row on larger screen****/
+   .clCntCenter{justify-content: center; justify-items:center;}   
+   .clAllCntWrapper{padding: 0 3em 0 3em;} 
+
+   #idCntMain, #idCntSoon, #idCntAside{ flex-basis: inherit;}
+
+/********************************************************/
+/**** flex setting and others added while working for  cupcake.html ****/
+
+ #idCupcakeSectionsContainer, .clCupcakeProductCard{
+     width: auto;
+     height: max-content;
+     display: -ms-flexbox;
+     display: flex;
+     flex-direction: column;
+    -ms-flex-wrap: wrap;  
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center
+  }
+#idCupcakeSectionsContainer, .clCupcakeProductCard, clCupcakeCategory{
+  justify-self: center;
+  align-self:center;
+}
+   .clFlexrow{
+     display: -ms-flexbox;
+     display: flex;
+     flex-direction: row;
+    -ms-flex-wrap: wrap;  
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    justify-items:center;
+  }
+/*
+ .idCupcakeSectionsContainer nav ul{
+      display: inline-block;
+     align-self: center;
+ }
+*/
+
+.clMinWidth{
+ width: -moz-min-content;
+ width: min-content;
+}
+.clMaxWidth{
+ width: -moz-min-content;
+ width: max-content;
+}
+
+.clMinHeight{
+ width: -moz-min-content;
+ width: min-content;
+}
+.clMaxHeight{
+ width: -moz-min-content;
+ width: max-content;
+}
+
+.clGrow1{ flex: 1 1 auto;}
+.clGrow2{ flex: 2 1 auto;}
+.clGrow3{ flex: 3 1 auto;}
+
+.clCupcakeProductCard section{ /* div to hold all sections of various cupcake categories like classic, holidays etc*/
+   max-width:max-content;
+   display: -ms-flexbox;
+   display: flex;
+   flex-direction: column;
+   -ms-flex-wrap: wrap;  
+   flex-wrap: wrap;
+   flex-direction: column;
+   border: solid 2px #39100F;
+   justify-content: space-evenly;
+   align-self: center;
+   align-content: center;
+}
+.clCupcakePricing{ /* targets each article with cupcake information*/
+   max-width:max-content;
+   display: -ms-flexbox;
+   display: flex;
+   flex-direction: column;
+   -ms-flex-wrap: wrap;  
+   flex-wrap: wrap;
+   flex-direction: column;
+}
+.clCupcakePricing p{ /* targets each article with cupcake information*/
+  align-self:flex-end;
+    padding: .2em 2em;
+  
+} 
+.clCupcakeCategory article{ /* targets each article with cupcake information*/
+   max-width:max-content;
+   display: -ms-flexbox;
+   display: flex;
+   flex-direction: column;
+   -ms-flex-wrap: wrap;  
+   flex-wrap: wrap;
+   flex-direction: column;
+   justify-content: space-between;
+   border: solid 1px #39100F;
+   padding: 1em 1em;
+}
+.clCupcakeProductCard article div:first-of-type{ /* targets cupcake image container*/
+    width: 30em;
+    max-height: 30em;
+   border: solid 2px #39100F;
+   padding: .2em .2em;
+   text-align: center;
+}
+.clCupcakeProductCard article div:nth-of-type(2){ /* targets cupcake details*/
+   display: -ms-flexbox;
+   display: flex;
+   flex-direction: column;
+   -ms-flex-wrap: wrap;  
+   flex-wrap: wrap;
+   flex-direction: column;
+    max-width: 30em;
+    max-height: 30em;
+   text-align: center;
+   border: solid 1px #39100F;
+   padding: .2em .2em;
+  justify-content: space-evenly;
+}
+.clCupcakeProductCard article div:nth-of-type(2) div{ /* targets div holding the increment buttons, use of */
+   display: -ms-flexbox;
+   display: flex;
+   flex-direction: row;
+   -ms-flex-wrap: wrap;  
+   flex-wrap: wrap;
+   flex-direction: row;
+    width: 17em;
+    max-height: max-content;
+    justify-content: space-around;
+   align-self: center;
+   align-content: center;
+   padding: .2em .2em;
+}
+.clCupcakeProductCard article input[type=text]{ /* use of descendant selector and type selector targets the cupcke count input*/
+   height: max-content;
+   width: 2em;
+   font-size: 2em;
+   text-align: center;
+   border: solid 1px #39100F;
+   margin: .2em .2em 0;
+   justify-self: center;
+}
+.clCupcakeProductCard article input[type=button]{ /* targets add to cart button*/
+   height: 2em;
+   width: 9em;
+   align-self: center;
+   font-size: 2em;
+   text-align: center;
+   border: solid 1px #39100F;
+   padding: .2em .2em 0;
+   background-color: #F2B1CB;
+}
+
+/**** end flex setting for cupcake****/
+
+/**** specific settings for shopping cart****/
+
+    #idSCartContainer{
+     width: auto;
+     height: max-content;
+     display: -ms-flexbox;
+     display: flex;
+     flex-direction: column;
+    -ms-flex-wrap: wrap;  
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center
+  }
+    
+    .clLabelShoppingCart label{
+      display:block;
+      padding: .7em 0 0.2em;
+      font-size: 1.2em;
+     }
+    .clLabelShoppingCart{
+      margin: 0 5em;
+      height: 2.5em;
+      width: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    .clShoppingCartItems {
+            margin: 0 5em;
+    }
+    .clShoppingCartItems ul li{
+      display: inline;
+    }
+    .clShoppingCartItems input[type=text]{
+            margin: 0 5em;
+            width: min-content;
+            font-size: 1em;
+    }
+/**** end flex setting for shopping cart****/
+
+/**** setting flex direction to column for tcCheckout.html form. change to flex: row on larger screen****/ 
+.row {
+     display: -ms-flexbox; /* IE10 */
+     display: flex;
+     flex-direction: column;
+    -ms-flex-wrap: wrap;  /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+    flex-direction: column;
+  }
+
+.col-25 {
+  -ms-flex: 25%; 
+  flex: 25%;
+}
+.col-33 {
+  -ms-flex: 33.33333%; 
+  flex: 33.33333%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+.col-66 {
+  -ms-flex: 66.66666%; 
+  flex: 66.66666%;
+}
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+.col-90 {
+  -ms-flex: 90%; /* IE10 */
+  flex: 90%;
+}
+.col-100 {
+  -ms-flex: 100%; /* IE10 */
+  flex: 100%;
+}
+
+
+.col-25,.col-50,.col-75,.col-90,.col-100 {padding: 0 16px;}
+
+ /**** form element styles for tcCheckout.html form ****/
+input[type=text],input[type=tel],input[type=email],input[type=date] {
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #39100F;
+  border-radius: 3px;
+}
+input[type=date] {  width: 90%;}
+textarea{
+   width: 100%;
+   border: 1px solid #39100F;
+  border-radius: 3px;
+}
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+/*.clLabelSize{}*/
+
+
+
+ /**** end tcCheckout.html form ****/ 
+
+/************************************************************************************
+	6. 		 GENERIC SELECTORS
+*************************************************************************************/
+/*enter comment button on contact us page*/
+     .clAddComment{
+      height: 2em;
+      width: 24em;
+      border: solid 1px #000;
+      border-radius: 1px;
+      background-color: #F2B1CB;
+      margin-left: 2em;
+     }
+/************************************************************************************
+	7. 		 FOOTER
+*************************************************************************************/
+/***************************************************
+	8. 		 MEDIA QUERIES
+******************************************************/
+
+@media screen and (min-width: 500px){
+ p,pre{font-size: 1.8em;} /* use of group selector */
+ h1{ font-size: 3.2em;}
+ h2{ font-size: 2.5em;}
+ h3{ font-size: 2.1em;} 
+ h4{ font-size: 2.0em;}
+}
+
+
+/**************setting flex for tc_contacts ************/
+ #idCntMain{flex-basis: 50%;}   /* use of selector id*/
+ #idCntSoon{flex-basis: 50%;}  /* use of selector id*/
+ #idCntAside{flex-basis: 100%;} /* use of selector id*/
+/***********end setting flex for tc_contacts ************/
+
+header nav a:link, footer nav a:link, .clNoLink{  /* use of pseudo class selector*/
+  font-size: 1.5em;
+}
+
+.clmsn{display: block; text-align: center;} /* use of class selector*/
+
+
+/*********** *********** *********** *********** *********** ***********   
+                            MEDIA QUERY large screen  
+***********************************************************************/
+
+@media screen and (min-width: 720px){
+ p,pre{
+   font-size: 2.2em;
+ }
+ h1{ font-size: 4.5em;}
+h2{ font-size: 2.6em;}
+h3{ font-size: 2.3em;} 
+h4{ font-size: 2.1em;}
+ .clIcon{
+   width: 35px;
+   height: 35px;
+   margin: .5em 1em;
+ }
+
+ .clHdrNav label{  background-size: 35px 35px; }
+
+/* larger footer text*/
+ .clFtp{font-size: 1.5em;}
+ 
+ /************* icons and mission statement on home page*************/
+.clIcon{
+   width: 50px;
+   height: 50px;
+   margin: .5em 1em;
+ }
+  .clLogo{grid-area: logo; 
+    height: 10em; 
+    width: 10em;
+}
+ .clHdrNav label{  background-size: 50px 50px; }
+.clMission {
+  font-size: 2em;
+  padding: .5em .5em;
+  align-self: center;
+}
+
+ /* setting navigation to horizontal for large screen */
+
+ .clHdrNav nav a{   text-decoration: none; }
+ .clHdrNav{justify-self: center;} 
+ .clHdrNav label{display: none;}
+ .clHdrNav nav{
+   height: auto;
+   overflow: visible;
+ }
+ .clHdrNav ul{
+   margin: 0;
+   border: 0;
+ }
+ .clHdrNav li{
+   display: inline-block;
+   border: 0;
+ }
+ .clHdrNav a{display: inline-block;}
+ 
+ #idCupcakeSectionsContainer nav li, clFtNav li{display: inline;
+ 
+ }
+  #idCupcakeSectionsContainer nav li a, clFtNav li a{
+    display: inline;
+  }
+   /* end setting navigation to horizontal for large screen */
+ 
+ /* setting flex direction to row for tcCheckout.html form*/
+ .row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  flex-direction: row;
+  -ms-flex-wrap: wrap; /* IE10 */
+    flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+ .clCupcakeCategory article, .clCupcakePricing{ /* change flex direction to column on large screen for article*/
+   max-width:max-content;
+   display: -ms-flexbox;
+   display: flex;
+   flex-direction: row;
+   -ms-flex-wrap: wrap;  
+   flex-wrap: wrap;
+   flex-direction: row;
+} 
+ .clCupcakeWrapper, #idCupcakeSectionsContainer, .clCupcakeProductCard {
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: max-content;
+}
+}
+/************************************************************************************/
+
+
+
+

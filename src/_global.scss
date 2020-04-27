@@ -1,0 +1,177 @@
+// Global settings
+.title-h1, .header1{    font: normal bold 30px/40px $font-family;   }
+.text-uppercase{    text-transform: uppercase;  }
+.font-roboto{    font-family: $font-family;}
+a{
+    color: $link;
+    &:visited{
+    color: $visited-link;
+    }
+    &:hover {
+        color: $text-color3;
+    }
+    &:active{
+        color: $active-link;
+    }
+}
+.header2{ 
+    font: normal bold 2em/2 $font-family;
+    color: $text-color2;
+    // font-weight: bold;
+    // font-size: 2em;
+    padding-top: 10px;
+    @include break(576px){
+        font-size: 1.8em;
+    }
+    @include break(768px){
+        font-size: 1.8em;
+    }
+
+}
+
+.header3{ 
+    font: normal bold 30px/2 $font-family;
+    color: $text-color2;
+    padding-top: 5px;
+    // @include break(576px){
+    //     font-size: 1.4em;
+    // }
+    // @include break(768px){
+    //     font-size: 2.3em;
+    // }
+    @include break(576px){
+        font-size: 2em;
+    }
+    @include break(992px){
+        font-size: 2.3rem;
+    }
+}
+.header4{
+    font: normal bold 15px/20px $font-family;
+    color: $text-color2;
+    @include break(768px){
+        font-size: 2rem;
+    }
+    
+}
+.header5{ 
+    font: normal bold 15px/20px $font-family;
+    color: $text-color2;
+    @include break(768px){
+        font-size: 2rem;
+    }
+}
+
+
+// .background-pink{background: transparentize($background-about, .4)};
+.background-white{background: #fff;}
+
+// .site main .about-area, .brand-area, .services-area, .project-area, .subscribe-us-area
+#idAboutMe, #idMoreAboutMe, #idServices, #idProjects, #idTestimonials, #idContact
+{
+    padding: 7rem 0;
+}
+
+.button{
+    padding: .8rem 2.2rem;
+    font: normal 500 16px/20px $font-family;
+    position: relative;
+    border: solid 3px transparent;
+    border-radius: 4px;
+}
+.button.primary-button{
+    background: $gradient-color;
+    background-clip: padding-box;
+    color: whitesmoke;
+    transition: background .6s ease;
+    box-shadow: $box-shadow;
+}
+.button.primary-button:hover{
+    background: $gradient-color2;
+    background-clip: padding-box;
+    color: $dark-blue;
+}
+.button.primary-button::after, .button.secondary-button::after{
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    background: $gradient-color;
+    content: ' ';
+    z-index: -1;
+    border-radius: 4px;
+}
+.button.secondary-button{
+    background: white;
+    background-clip: padding-box;
+    transition: background .6s ease;
+    box-shadow: $box-shadow;
+}
+.button.secondary-button:hover{
+    background:$gradient-color;
+    box-shadow: $box-shadow;
+    color: whitesmoke;
+}
+p{
+    font-size: 16px;
+    @include break(768px){
+        font-size: 15px;
+    }
+
+}
+.para-black, .blockquote{
+    font-size: 18px;
+    line-height: 1.5;
+    @include break(768px){
+        font-size: 15px;
+        line-height: 1.2;
+    }
+}
+.para{ 
+    color: $text-color1;
+    padding: 1rem;
+}
+.para-black, .blockquote{color: $text-color2; padding: 1rem;    }
+.blockquote{    font-weight: bold;}
+button:focus, button:active, button:hover,.btn:active,.btn.active{
+    outline: 0px !important;
+    box-shadow: none !important;
+}
+
+.navbar_fixed{
+    position: fixed;
+    // width: 100%;
+    top: 1px; 
+    left: 0;
+    right: 0;
+    background: $gradient-navbar;
+    box-shadow: $box-shadow;
+    z-index: 999;
+    transition: background 1s linear;
+}
+.clMap{
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 75%; //h/w 300/400=.75
+    height: 0;
+    overflow: hidden;
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 4%;
+        max-width: 100%;
+        max-height: 100%;
+        border: 0;
+    }
+    @include break(576px){
+        left: 16%;
+        padding-bottom: 35%;
+    }
+    @include break(768px){left: 24%;}
+    @include break(1200px){
+        left: 16%;
+        padding-bottom: 75%;
+    }
+
+ }

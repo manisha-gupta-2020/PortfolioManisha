@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 "/>
+     <meta name="author" content="Manisha Gupta"/>
+     <meta name="description" content="Shopping cart contents viewing and update."/>       
+      <!-- insert the fonts link here -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="../css/tcStyles.css" type="text/css" />  
+    <!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- enable older versions ofIE to understand media queries -->
+    
+    <!--    <script src="scripts/rspond.js"></script>-->
+    <title>Toronto Cupcakes - shopping cart</title>
+  </head>
+  
+  
+<!--  <body id="idBodyWrapper">-->
+  <body >
+    <div class="clBodyWrapper">
+     <header class="clHead">
+        <div class=clHeaderWrapper>       
+           <img src="../images/logo150X142.png" alt="logo" class=" clLogo" > 
+           <h1> Toronto Cupcakes</h1>
+           <a href="tcLogin.html" class="clImgLnk">
+           <img src="../images/user47X54.png" alt="login" class="clIcon clUsr"></a>      
+           <a href="tcShoppingCart.html" ><img src="../images/shoppingCart56X50.png" alt="shopping cart" class="clIcon clCart"></a>           
+        <div  class="clHdrNav">
+          
+           <input type="checkbox" id="idToggle" />
+           <label for="idToggle">menu</label>
+           
+           <nav>
+            <ul>
+              <li><a href="../index.html">home</a></li>
+              <li><a href="tcCupcake.html">cupcake</a></li>
+              <li><a href="tcCatering.html">catering</a></li>
+              <li><a href="tcOrders.html">orders</a></li>
+              <li><a href="tcFaq.html">FAQs</a></li>
+              <li><a href="tcAboutUs.html">about us</a></li>
+              <li><a href="tcCommunity.html">community</a><li>
+              <li><a href="tcContactUs.html">contact us</a><li>
+            </ul>
+          </nav>   
+         </div>         
+
+        </div>
+     </header> <!--   end header content   -->
+    <!-- **********************************
+    Main page content
+     **********************************-->
+     <main class="clMain">
+       <h2 class="clH2">Shopping cart</h2>
+       
+      <div id="idSCartContainer">
+        <form id="fShoppingCart" name="fShoppingCart">
+        <!--        <fieldset id="idCart">-->
+        <!--         <legend></legend>-->
+          <div class="clLabelShoppingCart clH2color" >
+             <label for="idQty" class="clQty">Quantity</label>
+             <label for="idItemDesc" class="clItemDesc">Item</label>
+             <label for="idPrice" class="clPrice">Price ($)</label>
+          </div>
+          <ul class="clShoppingCartItems">
+           <li>
+            <img src="../images/trash_can.png" alt="trash can">
+<!--
+            
+           <input type="checkbox" id="idTrashToggle" />
+           <label for="idTrashToggle">remove</label>
+-->
+           
+            <input type="text" id="idQty" name="qty" value="2" disabled />
+            <input type="text" id="idItemDesc" name="itemDesc" value="Chocolcate Hazelnut" disabled />       
+            <input type="text" id="idPrice" name="itemPrice" value="13.00" disabled /> 
+           </li>
+           <li>
+          <img src="../images/trash_can.png" alt="trash can">
+          <input type="text" id="idQty2" name="qty" value="1" disabled />
+          <input type="text" id="idItemDesc2" name="itemDesc" value="Hot Fudge sundae" disabled />       
+          <input type="text" id="idPrice2" name="itemPrice" value="3.25" disabled />            
+           </li>
+           <li>
+          <img src="../images/trash_can.png" alt="trash can">
+          <input type="text" id="idQty3" name="qty" value="6" disabled />
+          <input type="text" id="idItemDesc3" name="itemDesc" value="Red Velvet Raspberry" disabled />       
+          <input type="text" id="idPrice3" name="itemPrice" value="18.50" disabled />            
+           </li>
+           <li>
+          <img src="../images/trash_can.png" alt="trash can">
+          <input type="text" id="idQty4" name="qty" value="1" disabled />
+          <input type="text" id="idItemDesc4" name="itemDesc" value="Chocolate Carmel II" disabled />       
+          <input type="text" id="idPrice4" name="itemPrice" value="3.25" disabled />            
+           </li>
+          </ul>
+          
+          <div>
+           <p><a href="tcCheckout.html"><img src="../images//checkout.PNG" alt="checkout"></a></p>
+          </div>
+        <!--        </fieldset>-->
+        </form>
+       </div>
+       </main>
+     
+     <!--*************** end page content *******************-->
+ 
+      <footer class="clFooter">
+       <div class="clFooterWrapper">
+         <div class="clFtrIcons">
+            <img src="../images/facebook.png" alt="logo" class="clIcon clFbk">
+            <img src="../images/twitter.png" alt="twitter" class="clIcon clTwt">
+            <img src="../images/instagram.png" alt="instagram" class="clIcon clInst">
+            <img src="../images/pinterest.png" alt="pinterest" class="clIcon clPin">
+         </div>
+         
+         <div class="clFtP">
+            <p >copyright &copy; 2019 toronto cupcakes</p>
+        </div>
+         <div class="clFtNav">
+           <nav >
+            <ul>
+             <li><a href="tcResources.html">resources</a></li>
+             <li><a href="tcPolicies.html">policies</a></li>
+             <li><a href="tcEmployment.html">employment</a></li>
+            </ul>
+           </nav> 
+         </div>
+     </div>  
+     </footer>
+    </div> <!-- end body wrapper -->
+
+  </body>
+</html>

@@ -1,0 +1,125 @@
+/*****************************
+ to be renamed to tcStyles.css
+*****************************/
+
+/**********************************************
+CSS reset goes here. mutually decide to use nomalize.css or use anything from online resets or css guides or customize. 
+***********************************************/
+
+
+
+/**********************************************
+our styles go now
+***********************************************/
+
+/*
+what I used in the comps - refer style guide doc in finalcomps folder
+colors
+page background  -light yellow -  #fffff8 100%, rgb(255, 255, 248)  , hsv(60°, 3%, 100
+title,  background -pink - #F2B1CB 100% , rgb(242, 177, 203), hsv(336°, 27%, 95%)
+header backgound -yellow-  - #F8F3CB 100%, rgb(248, 243, 203), hsv(53.33333333333332°, 18%, 97%)
+header copy - brown - #39100F 100%, rgb(57, 16, 15), hsv(1.4285714285714284°, 74%, 22%)
+forms - 
+label -black- #000, rgb(0, 0, 0), hsv(0°, 0%, 0%)
+input box - White - #fff, rgb(255, 255, 255), hsv(0°, 0%, 100%)
+body copy - 
+nav link - 
+link - 
+
+
+
+
+    style                     small screen       middle screen        large screen:     color
+
+typography
+    header - h1             
+    h1
+    nav - link
+    nav - active link
+    nav - active link
+    visted -
+    hover -
+    active -                    underline same color
+
+    
+    
+
+line height
+
+button radius
+
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+nav, article, aside, footer, div, img {
+  display: block;
+}
+body {
+  margin: 10px 20px;
+}
+h3 {
+  margin: 15px 0;
+}
+#wrapper {
+  height: 100%;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 2fr 3fr 2fr 2fr;
+  /* for visual developers */
+  /* periods for spaces */
+  grid-template-areas: 
+    "l l l l i i i i i i i i"
+    "c c c c o o o o o o o o"
+    "b b b b t t t t t t t t"
+    "f f f f t t t t t t t t";
+}
+#logo {
+  grid-area: l;
+}
+#logo img {
+  margin: 0 auto;
+}
+#images {
+  grid-area: i;
+}
+#colors {
+  grid-area: c;
+}
+#icons {
+  grid-area: o;
+}
+#buttons {
+  grid-area: b;
+}
+#forms {
+  grid-area: f;
+}
+#type {
+  grid-area: t;
+}
+li {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px 20px;
+  border: solid 1px #000;
+  width: 120px;
+}
+li:nth-child(1) {
+  background-color: #FFFFF8;
+}
+li:nth-child(2) {
+  background-color: #F2B1CB;
+}
+li:nth-child(3) {
+  background-color: #F8F3CB;
+}
+li:nth-child(4) {
+  background-color: #39100F;
+  color: #fff;
+}

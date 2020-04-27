@@ -1,0 +1,47 @@
+header, main, nav, article, section, aside, figure, figcaption,  footer, video, audio{
+    display: block;
+}
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    line-height: 1.5;
+    color: $text-color2;
+    vertical-align: baseline;
+    margin: 0 auto;  
+}
+html{
+    background-color: $background-html;
+    font-size: 62.5%;
+}
+body{
+    line-height: 1.5;
+    max-width: 1140px;
+    min-width: 330px;
+    margin: 0 auto;   
+    // margin-left: 30%; //margin:0 auto not working
+    font-size: 1.8rem;
+    font-family: $font-body, sans-serif;
+    background: $background-body;
+    height: 100%;
+    color: $text-color2;
+         /* advanced checkbox hack rules */
+        //  -webkit-animation: bugfix 1s;
+         /*- end rules */
+}
+
+p{    padding-top: .3em;}
+
+ol, ul, li{
+    list-style-type: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}

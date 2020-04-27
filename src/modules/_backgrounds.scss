@@ -1,0 +1,48 @@
+.background{
+    margin: 1rem 0;
+    text-align: center;
+        >h2{
+            font: normal bold 1.5rem/2 $jumbotron-headings;
+            margin-top: 10rem;
+            color: $text-color1;
+            @include break(576px){ font-size: 1.8rem; margin-top: 10rem; line-height: 4;}
+            @include break(768px){ font-size: 2.4rem;}
+        }
+        >p{
+            font: normal bold 1.4rem/20px $font-family;
+            color:$text-color1;
+            @include break(576px){ font-size: 2.4rem; }
+            @include break(768px){ font-size: 3.5rem;}
+        }
+        > #idJWords{         
+            display: flex;
+            flex-direction: column;
+            margin-top: 4rem;
+            // position: relative;
+            @include break(576px){
+                margin-top: 4rem;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+            @include break(768px){
+                margin-top: 6rem;
+            }
+            > .clDesc{
+                font: normal bold 1.5rem $jumbotron-headings;
+                // margin-top: 3rem;
+                color: $text-color1;
+                @include break(576px){ font-size: 1.8rem;}
+                @include break(768px){ font-size: 2.4rem;}
+                @include break(992px){ font-size: 1.5em;}
+            }
+        }
+    > .site-buttons{
+        margin-top: 8rem;
+        @include break(768px){ margin-top: 4rem;}
+    }
+}
+
+.jumbotron{
+    margin-top: 0;
+    @include backImage("../images/jt1.jpg",500px);
+}

@@ -1,0 +1,64 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper{
+    margin: 2em auto;
+    padding: 2em;
+    max-width: 650px;
+    border: solid 5px #d3e203;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 15px;
+    position: relative;
+}
+header{
+    padding: 0 2em;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div{margin: .5em 0; padding: 1em;}
+h1{
+    font-size: 1.5em;
+    color: #951837;
+    border-bottom: solid 2px #d3e203;
+    margin-left: 20px;
+}
+h2{color: #951837;}
+p{ padding: 5px; font-size: 15px;}
+header img{width: 100px; height: 100px;}
+
+#frmUsrPlay{
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+#frmUsrPlay input{
+    padding: 0 35px;
+    margin-left: 35px;
+}
+#frmUsrAns input[type=submit],#frmUsrPlay input[type=submit]{
+    padding: 2px 10px;
+    background-color:  #d3e203;
+    color: #fff;
+    font-size: 1em;
+}
+#frmUsrPlay img{
+    width: 50px;
+    height: 50px;
+}
+
+#actualPlay{display: none;}
+.winner{
+    color: #951837;
+    font-size: 1em;
+    margin-top: 15px;
+    padding: 5px 0;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 "/>
+     <meta name="author" content="Manisha Gupta"/>
+     <meta name="description" content="checkout for the cart at toronto cupcakes"/>         
+      <!-- insert the fonts link here -->
+<!--    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="../css/tcStyles.css" type="text/css" />  
+    <!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- enable older versions ofIE to understand media queries -->
+    <!--    <script src="scripts/rspond.js"></script>-->
+    <title>Checkout - Order checkout process</title>
+  </head>
+  <body>
+    <div class="clBodyWrapper"> 
+     <header class="clHead">
+        <div class=clHeaderWrapper>       
+           <img src="../images/logo150X142.png" alt="logo" class=" clLogo" > 
+           <h1> Toronto Cupcakes</h1>
+           <a href="tcLogin.html" class="clImgLnk">
+           <img src="../images/user47X54.png" alt="login" class="clIcon clUsr"></a>      
+           <a href="tcShoppingCart.html" ><img src="../images/shoppingCart56X50.png" alt="shopping cart" class="clIcon clCart"></a>           
+        <div  class="clHdrNav">
+          
+           <input type="checkbox" id="idToggle" />
+           <label for="idToggle">menu</label>
+           
+           <nav>
+            <ul>
+             <li><a href="../index.html">home</a></li>
+              <li><a href="tcCupcake.html">cupcake</a></li>
+              <li><a href="tcCatering.html">catering</a></li>
+              <li><a href="tcOrders.html">orders</a></li>
+              <li><a href="tcFaq.html">FAQs</a></li>
+              <li><a href="tcAboutUs.html">about us</a></li>
+              <li><a href="tcCommunity.html">community</a><li>
+              <li><a href="tcContactUs.html">contact us</a><li>
+            </ul>
+          </nav>   
+         </div>         
+
+        </div>
+     </header> <!--   end header content   -->
+    <h2 class="clH2color">Checkout</h2>
+    
+ <main class="clMain row"> <!-- container for all content main-->
+  <div class="col-90"> <!-- div changed to section  -->
+<!--    <div class="container">-->
+      <form action="#">
+       <div class="col-90">
+          <!-- <div class="container">-->
+           <div>
+             <p>Order Type:</p>
+             <input type="radio" name="orderType" value="delivery" checked> Delivery
+             <input type="radio" name="orderType" value="pickup"> Pick Up
+           </div>
+           <h3 class="clH2color">Delivery details</h3>
+           <label for="checkDlvrZip">Enter area code for delivery:</label>
+           <input type="text" id="checkDlvrZip" name="checkDlvrZip">         
+           
+           <label for="DlvrDate" >Enter date for delivery: </label>
+           <input type="text" id="DlvrDate" name="DlvrDate" > 
+           <!-- <i class="far fa-calendar-alt"></i> -->                   
+           <div>
+             <p>Time:</p>
+             <input type="radio" name="orderDlvrTime" value="morning" checked> Morning (8am - 12 pm)
+             <input type="radio" name="orderDlvrTime" value="afternoon"> Afternoon (11am - 5 pm)
+             <input type="radio" name="orderDlvrTime" value="anytime"> Anytime             
+             <p>Morning orders must be placed by 9pm of previous day. Only available for Mxx Postal Codes - 5.00 surcharge.</p>
+             <p>Afternoon orders must be placed by 8am for same day delivery</p>
+           </div>
+          <!-- </div>-->
+       </div> <!-- end order type -->
+        <div class="row">
+          <div class="col-50">
+            <h3 class="clH2color">Billing Information</h3>
+            <p>* required fields</p>
+            <label>
+              <input type="checkbox"  checked="checked" name="existingCust"> Existing customer
+            </label>             
+            <label for="fname"> First Name *</label>
+            <input type="text" id="fname" name="firstname" placeholder="John ">
+            <label for="lname"> Last Name *</label>
+            <input type="text" id="lname" name="firstname" placeholder="Doe">
+            
+            <label for="company"> Company </label>
+            <input type="text" id="company" name="company">            
+             
+           <label for="adr1"> Address 1 *</label>
+            <input type="text" id="adr1" name="address1" placeholder="542 W. 15th Street">
+           <label for="adr2"> Address 2 </label>
+            <input type="text" id="adr2" name="address2" >            
+            
+            <label for="city"> City / Town / Village *</label>
+            <input type="text" id="city" name="city" placeholder="Toronto">
+
+            <label for="state"> State / Province / Region Code * *</label>
+            <input type="text" id="state" name="state">  
+            
+           <label for="zip">Zip/Postal Code *</label>
+           <input type="text" id="zip" name="zip" placeholder="10001">            
+            <label for="country"> Country *</label>
+            <input type="text" id="country" name="country" placeholder="Canada">                                                                                      
+            <label for="phone"> Phone *</label>
+            <input type="tel" id="phone" name="email" placeholder="567-577-4657">                                             
+                                              
+            <label for="email"> Email *</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com">
+          </div> <!-- end billing information -->
+
+          <div class="col-50">
+            <h3 class="clH2color">Delivery Address</h3>
+            <p>* required fields</p>            
+            <label>
+              <input type="checkbox"  name="sameadr"> Delivery address same as billing address
+            </label>   
+
+            <label for="dlvrfname"> First Name *</label>
+            <input type="text" id="dlvrfname" name="dlvrfirstname" placeholder="John ">
+            <label for="dlvrlname"> Last Name *</label>
+            <input type="text" id="dlvrlname" name="dlvrfirstname" placeholder="Doe">
+            
+            <label for="dlvrcompany"> Company </label>
+            <input type="text" id="dlvrcompany" name="dlvrcompany"> 
+             
+           <label for="dlvradr1"> Address 1 *</label>
+            <input type="text" id="dlvradr1" name="dlvraddress1" placeholder="542 W. 15th Street">
+           <label for="dlvradr2"> Address 2 </label>
+            <input type="text" id="dlvradr2" name="dlvraddress2" >            
+            
+            <label for="dlvrcity"> City / Town / Village *</label>
+            <input type="text" id="dlvrcity" name="dlvrcity" placeholder="Toronto">
+
+            <label for="dlvrstate"> State / Province / Region Code * *</label>
+            <input type="text" id="dlvrstate" name="dlvrstate">  
+            
+           <label for="dlvrzip">Zip/Postal Code *</label>
+           <input type="text" id="dlvrzip" name="dlvrzip" placeholder="10001">            
+            <label for="dlvrcountry"> Country *</label>
+            <input type="text" id="dlvrcountry" name="dlvrcountry" placeholder="Canada">                                                                                      
+            <label for="dlvrphone"> Phone *</label>
+            <input type="tel" id="dlvrphone" name="dlvrphone" placeholder="567-577-4657">                                             
+                                              
+            <label for="dlvremail"> Email *</label>
+            <input type="email" id="dlvremail" name="dlvremail" placeholder="john@example.com">
+            
+          </div> <!-- end delivery address -->
+            <div class="row">
+              <div class="col-100">
+                <label for="instructions" class="clH2color" >Special Instructions (max 250 characters)</label>
+                <textarea name="instructions" id="instructions" cols="110" rows="6"></textarea>
+                <p><a href="tcPolicies.html">Our delivery policy</a></p>
+                <label>
+                  <input type="checkbox" checked="checked" name="sameadr"> I have read and understood.
+                </label>         
+
+                                              
+             </div>
+           </div> <!-- end special instructions -->
+        </div> <!-- main div -->
+        
+        <div class="row">
+          <div class="col-25">
+            <input type="button" value="Back" class="clBtn">
+          </div>
+          <div class="col-25">
+             <input type="submit" value="Continue to checkout" class="clBtn">
+          </div>
+         </div>        
+     </form>
+  </div>
+</main>  <!-- ***********  end main content   *********** -->
+      <footer class="clFooter">
+       <div class="clFooterWrapper">
+         <div class="clFtrIcons">
+            <img src="../images/facebook.png" alt="logo" class="clIcon clFbk">
+            <img src="../images/twitter.png" alt="twitter" class="clIcon clTwt">
+            <img src="../images/instagram.png" alt="instagram" class="clIcon clInst">
+            <img src="../images/pinterest.png" alt="pinterest" class="clIcon clPin">
+         </div>
+         
+         <div class="clFtP">
+            <p >copyright &copy; 2019 toronto cupcakes</p>
+        </div>
+         <div class="clFtNav">
+           <nav >
+            <ul>
+             <li><a href="tcResources.html">resources</a></li>
+              <li><p  class="clNoLink">policies</p></li> 
+             <li><a href="tcEmployment.html">employment</a></li>
+            </ul>
+           </nav> 
+         </div>
+     </div>  
+     </footer>
+
+    </div> <!-- end body wrapper -->
+  </body>
+</html>

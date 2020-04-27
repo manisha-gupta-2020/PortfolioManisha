@@ -1,0 +1,43 @@
+.table{ //use of nesting
+    border-collapse: collapse;
+    font-size: 1.5rem;
+    text-align: left;
+    width: 100%;
+    caption{
+        font-size: 2.5rem;
+        text-align: left;
+        padding-bottom: 5px;
+        color: $dark-blue;
+    }
+
+    > thead, >tbody, > tfoot{      //sibling selectors
+        > tr{
+            &:nth-child(even){
+                background-color: $color-even-cells;
+                &:hover{
+                    background-color: opacify($color-even-cells, .1); //use of color modifier
+                }
+            }
+            > th, > td{
+                padding: 10px;
+                border-bottom: 1px dotted $dark-blue;
+            }
+        }
+    }
+
+    > thead
+        
+        > tr{
+            background-color: $dark-blue;
+            color: $white;
+            // color: $background;
+            &:hover{
+                background-color: complement($dark-blue); //use of color modifier
+            }
+            > th{
+                border-bottom: 0;
+                color: $white;
+            }
+    }
+
+}
